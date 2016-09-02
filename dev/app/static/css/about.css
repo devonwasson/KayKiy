@@ -1,0 +1,80 @@
+body {
+  background-color: #30dbbd;
+  margin: 0 0 0 0;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #303030;
+  padding-bottom: 105px;
+}
+
+.title{
+  color: #fff;
+  padding: 20px 0px 20px 0px;
+  font-size: 2.5em;
+  padding-bottom: 2%;
+}
+
+.bullets{
+  background-color: #FAF8F2;
+  text-align:justify;
+  margin: 0 0 0 0;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 5px;
+  padding-bottom: 1%;
+  font-size: 1.2em;
+}
+
+.bullets a:link, a:hover{
+  color: #303030;
+}
+
+.bullets a:visited{
+  background-color: #FAF8F2;
+  color: #54adf1;
+}
+
+.image{
+  background-image:url("https://41.media.tumblr.com/98e701d3c63ea883c7f9c67108c92179/tumblr_nx9r2gC49C1r438poo1_540.png");
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  position: fixed;
+  background-size: 750px 100%;
+}
+
+
+a:link,a:visited {
+   color: #54adf1;
+   background-color: #30dbbd;
+   text-decoration: none;
+   target-new: none;
+}
+  a:hover {
+   color: #FFFFFF;
+   background-color: #30dbbd;
+   text-decoration: underline;
+   target-new: none;
+}
+
+.links{
+  background-color:#30dbbd;
+  font-size: 20px;
+  display: inline;
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 100px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.links li{
+  text-align: left;
+  padding-top: 100px;
+  margin:  0 3% 0  0;
+  display: inline;
+}

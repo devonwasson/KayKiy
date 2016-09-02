@@ -1,0 +1,77 @@
+<!--todo: underline active school name, loading screen icon, collect data, fit on one screen><-->
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70614050-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<html>
+
+<head>
+  <title>KayKiy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <script type="text/javascript" src="http://media.flowingdata.com/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="http://media.flowingdata.com/js/d3.js?1.29.1"></script>
+  <script type="text/javascript" src="http://media.flowingdata.com/js/d3.time.js?1.29.1"></script>
+  <script type="text/javascript" src="http://media.flowingdata.com/js/d3.csv.js?1.29.1"></script>
+</head>
+
+<body>
+  <div class="topStuff">
+    <div class="title">Campus Perception</div>
+  <!--div class="des">Read the yak below and guess if it was <span style='color:green;'>kept on</span> or  <span style='color:red;'>voted off</span> the yikyak feed.</div-->
+    <div class="des">We collected thousands of posts on yikyak over the course of a month to understand how the community feels about controversial topics. Can you guess how the community responded? Read the yak below and guess if it was kept on or voted off the yikyak feed.</div>
+
+  </div>
+  <div class="all">
+    <div id="post" finalVote="0" finalTime = "-1"></div>
+
+    <div id="buttons">
+      <button class='button' id="button1" value="9001" onclick="kept()">Stayed on</button>
+      <button class='button' id="button2" value="-175" onclick="removed()">Removed</button>
+    </div>
+    <button class='button' id="button3"  onclick="getNewPost()">Try another</button>
+    <p id="resultText"></p>
+    <p id="resultStats"></p>
+
+
+    <div class = "graphAndLabel" id="graphAndLabel">
+      <p id = "label">Take a look at how the yakarma of this post changed over a 24 hour period.</p>
+      <div>
+        <div class="help-tip" data-tooltip-position="right">
+         <p>This graph shows the life of a post on YikYak. The blue line represents the post on which you just guessed.
+         The line changes in height to reflect how many votes it had at any given time. As you continue guessing on yaks,
+       green lines will appear. The green lines represent yaks you have already seen.</p>
+       </div>
+     </div>
+      <div class = "graphAndY">
+        <div class = "yaxisLabel">Votes</div>
+        <div id="graph"></div>
+      </div>
+      <div class = "xaxisLabel">Time (hours)</div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+<div class="links">
+  <li><a href="/">Home</a></li>
+  <!-- li><a href="/graph">Complete Graph</a></li>
+  <li><a href="/tree">Word Tree</a></li !-->
+  <li><a href="/about">About</a></li>
+  <li><a onclick="javascript: getData('bucknell');">Bucknell</a></li>
+  <li><a onclick="javascript: getData('bloom');">Bloomsburg</a></li>
+  <li><a onclick="javascript: getData('penn');">Penn State</a></li>
+  <li><a onclick="javascript: getData('lehigh');">Lehigh</a></li>
+
+  </div>
+
+  <div class="image"></div>
+
+</html>
